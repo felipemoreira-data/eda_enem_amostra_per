@@ -4,13 +4,8 @@ import plotly.express as px
 
 
 from utils.data_loader import get_df
-from utils.filters import sidebar_filters
 
-st.set_page_config(page_title= "Enem amostra perfeita 2024",
-                   layout = "wide")
 
-with open("styles/styles.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html= True)
 
 st.title('Análise Geral do Conjunto Amostral do ENEM')
 st.subheader('Análise da Média das 5 notas dos candidatos')
@@ -36,12 +31,6 @@ fig = px.histogram(data_frame= df,
                    opacity= 0.7)
 st.plotly_chart(fig)
 
-# st.markdown("""
-# <div class="interpretacao">
-# <b>Interpretação:</b><br>
-# O histograma revela 
-# </div>
-# """, unsafe_allow_html=True)
 
 st.divider()
 
